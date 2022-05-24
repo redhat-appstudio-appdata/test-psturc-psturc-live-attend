@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: build-suite-test-component-git-source-yyrwvypcex
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: build-suite-test-component-git-source-yyrwvypcex
+    app.kubernetes.io/part-of: test-psturc
+  name: build-suite-test-component-git-source-yyrwvypcex
+  namespace: psturc
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: build-suite-test-component-git-source-yyrwvypcex
+    weight: 100
+status: {}

@@ -1,4 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
 bases:
 - components/basic-quarkus/base
+- components/build-suite-test-component-git-source-yyrwvypcex/base
+kind: Kustomization
 resources:
 - common-storage-pvc.yaml
